@@ -20,49 +20,31 @@ public class SpriteMover : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             //Only works if shift is held down.
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            {
+                tf.position = tf.position + Vector3.up * Time.deltaTime * speed;
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            {
+                tf.position = tf.position + Vector3.left * Time.deltaTime * speed;
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+            {
+                tf.position = tf.position + Vector3.down * Time.deltaTime * speed;
+            }
+
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            {
+                tf.position = tf.position + Vector3.right * Time.deltaTime * speed;
+            }
         }
         else
         {
 
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                tf.position = tf.position + Vector3.up * Time.deltaTime * speed;
-            }
+            
 
-            else if (Input.GetKey(KeyCode.W))
-            {
-                tf.position = tf.position + Vector3.up * Time.deltaTime * speed;
-            }
-
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                tf.position = tf.position + Vector3.left * Time.deltaTime * speed;
-            }
-
-            else if (Input.GetKey(KeyCode.A))
-            {
-                tf.position = tf.position + Vector3.left * Time.deltaTime * speed;
-            }
-
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                tf.position = tf.position + Vector3.down * Time.deltaTime * speed;
-            }
-
-            else if (Input.GetKey(KeyCode.S))
-            {
-                tf.position = tf.position + Vector3.down * Time.deltaTime * speed;
-            }
-
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                tf.position = tf.position + Vector3.right * Time.deltaTime * speed;
-            }
-
-            else if (Input.GetKey(KeyCode.D))
-            {
-                tf.position = tf.position + Vector3.right * Time.deltaTime * speed;
-            }
         }
     }
 }

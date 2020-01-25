@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 1662396563}
   - component: {fileID: 1662396562}
   - component: {fileID: 1662396561}
+  - component: {fileID: 1662396566}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -370,3 +371,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1662396566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662396560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e816a5a79052d61458c642bcc616d3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reset: {fileID: 0}
