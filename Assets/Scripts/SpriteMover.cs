@@ -28,6 +28,7 @@ public class SpriteMover : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             {
                 tf.position = tf.position + Vector3.left * Time.deltaTime * speed;
+                tf.Rotate(Vector3.forward * 3);
             }
 
             if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
@@ -38,13 +39,8 @@ public class SpriteMover : MonoBehaviour
             if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 tf.position = tf.position + Vector3.right * Time.deltaTime * speed;
+                tf.Rotate(Vector3.forward * -3);
             }
-        }
-        else
-        {
-
-            
-
         }
     }
 }
